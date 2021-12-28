@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@Posts');
+Route::get('blog/{post}', 'PageController@post')->name('post');
