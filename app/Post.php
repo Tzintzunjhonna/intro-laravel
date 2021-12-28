@@ -27,4 +27,7 @@ class Post extends Model
     public function user(){ 
         return $this->belongsto(User::class);        
     }
+    public function getGetExcerptAttribute(){ 
+        return substr($this->body,0, 140);        
+    }
 }

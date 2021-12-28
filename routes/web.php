@@ -13,3 +13,11 @@
 
 Route::get('/', 'PageController@Posts');
 Route::get('blog/{post}', 'PageController@post')->name('post');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('posts', 'Backend\PostController')
+    ->middleware('auth')
+    ->except('show');

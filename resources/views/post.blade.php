@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -6,9 +8,7 @@
                             <div class="alert alert-success" role="alert">
                                 <h5 class="card-title">{{$post->title}}</h5>
                                 <p class="card-text">
-                                    {{ $post->body }}
-                                    <a href="{{ route('post', $post) }}">Leer más</a>
-                                </p>
+                                    {{ $post->body }}                                </p>
 
                                 <p class="text-muted mb-0">
                                     <en>
@@ -22,3 +22,4 @@
         </div>
     </div>
 </div>
+@endsection
